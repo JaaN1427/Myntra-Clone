@@ -46,3 +46,5 @@ jobs:
         run: docker pull janal024/myntra:latest
       - name: Deploy to container
         run: docker run -d --name game -p 3000:3000 janal024/myntra:latest
+      - name: Deploy to kubernetes
+        run: kubectl apply -f deployment-service.yml
